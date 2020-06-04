@@ -1,0 +1,8 @@
+<po-page-default p-title="Clientes" [p-actions]="acoesPagina">
+
+  <po-table
+    [p-items]="(clientes | async)?.items"
+    [p-actions]="acoes">
+  </po-table>
+
+</po-page-default>

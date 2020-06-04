@@ -1,0 +1,15 @@
+<po-page-edit
+  p-title="Editar Cliente"
+  (p-save)="salvar(model)"
+  (p-cancel)="voltar()">
+
+  <form *ngIf="model" class="po-row" #clienteForm="ngForm">
+    <po-input
+      p-required
+      p-label="Nome"
+      p-auto-focus
+      [(ngModel)]="model.nome"
+      name="name">
+    </po-input>
+  </form>
+</po-page-edit>

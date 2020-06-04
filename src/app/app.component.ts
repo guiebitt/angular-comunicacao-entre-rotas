@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { PoMenuItem } from '@po-ui/ng-components';
 
 @Component({
@@ -10,11 +10,20 @@ import { PoMenuItem } from '@po-ui/ng-components';
 export class AppComponent {
 
   readonly menus: Array<PoMenuItem> = [
-    { label: 'Home', action: this.onClick.bind(this) }
+    {
+      label: 'Início',
+      shortLabel: 'Início',
+      icon: 'po-icon-home',
+      link: '/'
+    },
+    {
+      label: 'Clientes',
+      shortLabel: 'Clientes',
+      icon: 'po-icon-users',
+      link: '/clientes'
+    }
   ];
 
-  private onClick() {
-    alert('Clicked in menu item')
-  }
+  constructor(private readonly router: Router) { }
 
 }

@@ -1,27 +1,14 @@
-# AngularComunicacaoEntreRotas
+# Comunicação entre Rotas em Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 9.1.7.
+Adicionado [PO UI](https://po-ui.io/) versão 2.4.1 e [Web Backend API](https://www.npmjs.com/package/web-backend-api) versão 0.0.19.
 
-## Development server
+## Servidor de desenvolvimento
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Execute `ng serve` para iniciar o servidor local de desenvolvimento. Navegue até `http://localhost:4200/`. A aplicação vai automaticamente recarregar quando houver atualizações no código fonte.
 
-## Code scaffolding
+## Parâmetros via URL path com utilização de Resolve
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Há um exemplo de cadastro simples de Clientes que utiliza a passagem de parâmetro entre rotas (path) e o conceito de Resolve para carregamento dos dados antes de efetivamente ativar a rota. Com as requisições para o backend fictício sendo realizadas com o cabeçalho que indica a apresentação do Loading, a navegação entre listagem, edição, exclusão, ocorrem de forma fluída.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![Cliente Resolve](docs/cliente_resolve.gif)

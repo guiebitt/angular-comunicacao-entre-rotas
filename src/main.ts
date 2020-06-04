@@ -18,7 +18,7 @@ context.keys().map(context);
 const config: BackendConfigArgs = {
     post204: false, // return the item in body after POST
     put204: false, // return the item in body after PUT
-    delay: 2000,
+    delay: 1000,
     strategyId: 'uuid'
 };
 setupBackend(config, { dbtype: 'indexdb', databaseName: 'angular-comunicacao-entre-rotas' }).then(() => {
