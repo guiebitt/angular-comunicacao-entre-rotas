@@ -1,0 +1,11 @@
+<po-page-list
+  p-title="Produtos"
+  [p-actions]="acoesPagina"
+  [p-filter]="filtroPagina">
+
+  <po-table
+    [p-items]="(produtos | async)?.items"
+    [p-actions]="acoes">
+  </po-table>
+
+</po-page-list>

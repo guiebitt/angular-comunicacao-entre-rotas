@@ -21,6 +21,12 @@ export class AppComponent {
       shortLabel: 'Clientes',
       icon: 'po-icon-users',
       link: '/clientes'
+    },
+    {
+      label: 'Produtos',
+      shortLabel: 'Produtos',
+      icon: 'po-icon-cart',
+      link: '/produtos'
     }
   ];
 

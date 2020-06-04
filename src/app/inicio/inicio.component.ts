@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class InicioComponent implements OnInit {
 
+  filtroProduto: string;
+
   constructor(public router: Router) { }
 
   ngOnInit(): void { }

@@ -3,7 +3,7 @@ import { clientes, collectionName } from './cliente.mock';
 
 dataService(collectionName, (dbService: IBackendService) => {
 
-  clientes.forEach((customer) => {
-    dbService.storeData(collectionName, customer);
+  clientes.forEach((cliente) => {
+    dbService.storeData(collectionName, cliente);
   });
 });
