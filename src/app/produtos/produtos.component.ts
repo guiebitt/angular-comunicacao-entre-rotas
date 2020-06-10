@@ -4,6 +4,7 @@ import { PoPageAction, PoPageFilter, PoTableAction } from '@po-ui/ng-components'
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { IApiCollection } from '../core/entities/api-collection.interface';
+import { Produto } from '../core/entities/produto.entity';
 import { IProduto } from '../core/entities/produto.interface';
 import { ProdutoService } from '../core/services/produto.service';
 
@@ -15,6 +16,7 @@ import { ProdutoService } from '../core/services/produto.service';
 export class ProdutosComponent implements OnInit {
 
   filtroRapido: string;
+  produtoIncluido: Produto;
 
   get produtos(): Observable<IApiCollection<IProduto>> {
     return this.produtoService.produtos.asObservable();
@@ -50,7 +52,10 @@ export class ProdutosComponent implements OnInit {
     private readonly router: Router,
     private readonly activatedRoute: ActivatedRoute,
     private readonly produtoService: ProdutoService
-  ) { }
+  ) {
+    const navigation = this.router.getCurrentNavigation();
+    this.produtoIncluido = navigation.extras.state ? navigation.extras.state.produtoIncluido : undefined;
+  }
 
   ngOnInit(): void {
     this.filtroRapido = this.activatedRoute.snapshot.data.filtroRapido;

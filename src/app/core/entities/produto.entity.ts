@@ -7,7 +7,7 @@ export class Produto implements IProduto {
   codigo: string;
   descricao: string;
 
-  public static novoCliente(): Produto {
+  public static novoProduto(): Produto {
     return new Produto({
       id: uuidv4(),
       codigo: null,

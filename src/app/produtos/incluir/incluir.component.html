@@ -1,0 +1,23 @@
+<po-page-edit
+  p-title="Incluir Produto"
+  (p-save)="salvar(model)"
+  (p-cancel)="voltar()">
+
+  <form *ngIf="model" class="po-row" #produtoForm="ngForm">
+    <po-input
+      class="po-xl-6 po-lg-6 po-md-6 po-sm-6"
+      p-required
+      p-label="Código"
+      p-auto-focus
+      [(ngModel)]="model.codigo"
+      name="codigo">
+    </po-input>
+    <po-input
+      class="po-xl-6 po-lg-6 po-md-6 po-sm-6"
+      p-required
+      p-label="Descrição"
+      [(ngModel)]="model.descricao"
+      name="descricao">
+    </po-input>
+  </form>
+</po-page-edit>

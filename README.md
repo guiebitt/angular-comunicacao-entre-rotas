@@ -18,3 +18,9 @@ Há um exemplo de cadastro simples de Clientes que utiliza a passagem de parâme
 Há um exemplo de listagem de Produtos que utiliza a passagem de parâmetro entre rotas (query param) para aplicação automática de um filtro rápido na consulta.
 
 ![Produto QueryParam](docs/query-param.gif)
+
+## Parâmetros via State
+
+Há um exemplo de inclusão de Produto que, ao retornar para a tela de listagem quando a inclusão é efetuada com sucesso, realiza a passagem de parâmetro entre rotas (state) com o produto incluído para a tela de listagem, onde é apresentado um widget com as informações do produto.
+
+![Produto State](docs/state.gif)

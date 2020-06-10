@@ -3,6 +3,16 @@
   [p-actions]="acoesPagina"
   [p-filter]="filtroPagina">
 
+  <po-widget
+    *ngIf="produtoIncluido"
+    class="po-row po-mb-1"
+    p-primary-label="OK"
+    p-title="Produto incluído com sucesso!"
+    (p-primary-action)="produtoIncluido = undefined">
+    <po-info class="po-p-0 po-xl-4 po-lg-4 po-md-4 po-sm-4" p-label="ID" [p-value]="produtoIncluido.id"></po-info>
+    <po-info class="po-xl-4 po-lg-4 po-md-4 po-sm-4" p-label="Código" [p-value]="produtoIncluido.codigo"></po-info>
+    <po-info class="po-xl-4 po-lg-4 po-md-4 po-sm-4" p-label="Descrição" [p-value]="produtoIncluido.descricao"></po-info>
+  </po-widget>
   <po-table
     [p-items]="(produtos | async)?.items"
     [p-actions]="acoes">

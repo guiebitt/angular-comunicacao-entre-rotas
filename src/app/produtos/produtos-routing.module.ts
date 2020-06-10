@@ -1,3 +1,4 @@
+import { IncluirComponent } from './incluir/incluir.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProdutoGetAllResolver } from '../core/services/produto-get-all.resolve';
@@ -10,6 +11,10 @@ const routes: Routes = [
     resolve: {
       filtroRapido: ProdutoGetAllResolver
     }
+  },
+  {
+    path: 'incluir',
+    component: IncluirComponent
   },
   {
     path: '**',
