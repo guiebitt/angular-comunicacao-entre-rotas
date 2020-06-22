@@ -37,11 +37,6 @@ export class ProdutosComponent implements OnInit {
 
   readonly acoes: PoTableAction[] = [
     {
-      label: 'Editar',
-      icon: 'po-icon-edit',
-      action: this.editar.bind(this)
-    },
-    {
       label: 'Excluir',
       icon: 'po-icon-delete',
       action: this.excluir.bind(this)
@@ -63,12 +58,6 @@ export class ProdutosComponent implements OnInit {
 
   incluir() {
     this.router.navigate(['incluir'], {
-      relativeTo: this.activatedRoute
-    });
-  }
-
-  editar(produto: IProduto) {
-    this.router.navigate([produto.id], {
       relativeTo: this.activatedRoute
     });
   }

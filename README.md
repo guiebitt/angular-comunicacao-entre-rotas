@@ -7,6 +7,17 @@ Adicionado [PO UI](https://po-ui.io/) versão 2.4.1 e [Web Backend API](https://
 
 Execute `ng serve` para iniciar o servidor local de desenvolvimento. Navegue até `http://localhost:4200/`. A aplicação vai automaticamente recarregar quando houver atualizações no código fonte.
 
+## Guard de autenticação e autorização
+
+Há um exemplo de guard de autenticação e um de autorização implementado neste projeto.
+Ao executar a aplicação, será necessário efetuar o login para acesso aos demais exemplos:
+
+| Usuário | Senha | Permissões |
+| -| - | - |
+| produto | produto | CADASTRO DE PRODUTO
+| cliente | cliente | CADASTRO DE CLIENTE
+| admin | admin | ACESSO COMPLETO
+
 ## Parâmetros via URL: path com utilização de Resolve
 
 Há um exemplo de cadastro simples de Clientes que utiliza a passagem de parâmetro entre rotas (path) e o conceito de Resolve para carregamento dos dados antes de efetivamente ativar a rota. Com as requisições para o backend fictício sendo realizadas com o cabeçalho que indica a apresentação do Loading, a navegação entre listagem, edição, exclusão, ocorrem de forma fluída.

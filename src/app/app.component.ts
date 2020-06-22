@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { PoMenuItem } from '@po-ui/ng-components';
+import { LoginFakeService } from './core/services/login-fake.service';
 
 @Component({
   selector: 'app-root',
@@ -27,9 +28,23 @@ export class AppComponent {
       shortLabel: 'Produtos',
       icon: 'po-icon-cart',
       link: '/produtos'
+    },
+    {
+      label: 'Sair',
+      shortLabel: 'Sair',
+      icon: 'po-icon-exit',
+      action: () => {
+        this.loginService.logout();
+        this.router.navigate(['login']);
+      }
     }
   ];
 
-  constructor(private readonly router: Router) { }
+  constructor(
+    public loginService: LoginFakeService,
+    private readonly router: Router
+  ) { }
+
+
 
 }

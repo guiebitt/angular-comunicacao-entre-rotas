@@ -1,5 +1,5 @@
 <div class="po-wrapper">
-  <po-toolbar p-title="Comunicação entre Rotas - Angular"></po-toolbar>
-  <po-menu [p-menus]="menus"></po-menu>
+  <po-toolbar *ngIf="loginService.usuarioEstaAutenticado" p-title="Comunicação entre Rotas - Angular"></po-toolbar>
+  <po-menu *ngIf="loginService.usuarioEstaAutenticado" [p-menus]="menus"></po-menu>
   <router-outlet></router-outlet>
 </div>
