@@ -1,7 +1,7 @@
 # Comunicação entre Rotas em Angular
 
 Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 9.1.7.
-Adicionado [PO UI](https://po-ui.io/) versão 2.4.1 e [Web Backend API](https://www.npmjs.com/package/web-backend-api) versão 0.0.19.
+Adicionado [PO UI](https://po-ui.io/) versão 2.7.0 e [Web Backend API](https://www.npmjs.com/package/web-backend-api) versão 0.0.19.
 
 ## Servidor de desenvolvimento
 
