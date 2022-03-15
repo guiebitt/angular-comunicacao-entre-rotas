@@ -21,7 +21,7 @@
     "@angular/router": "~9.1.9",
     "@po-ui/ng-components": "^2.7.0",
     "@po-ui/ng-templates": "^2.7.0",
-    "lodash-es": "^4.17.15",
+    "lodash-es": "^4.17.21",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "uuid": "^8.1.0",
